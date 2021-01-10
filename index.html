@@ -3,20 +3,26 @@
     <head>
         <style>
             body {
-                font: 1.2em sans-serif;
+                font: 1.2em;
                 margin: 1em auto;
                 max-width: 40em;
             }
             h1, h2, h3 {
                 line-height: 1.2em;
             }
+            .title {
+                text-align: center;
+            }
+            footer {
+                text-align: right;
+            }
             @media print {
-                max-width: none;
+                body { max-width: none; }
             }
             @media (prefers-color-scheme: dark) {
-                body {
-                    color: #fff;
-                    background: #000;
+                body { 
+                    color: white;
+                    background: black;
                 }
                 a:link {
                    color: #9cf; 
@@ -29,16 +35,41 @@
                 }
             }
         </style>
+        <title>Nicholas Kachur | Amiable Technologist </title>
     </head>
+
     <body>
-        <h1>Nicholas Kachur</h1>
+        <h1 class="title">Nicholas Kachur</h1>
+
         <h2>About Me</h2>
         <ul>
             <li>I'm a human being trying my best.</li>
             <li>I live and work as a technologist in Philadelphia, PA, USA.</li>
-            <li>Other exploits to come soon.</li>
+            <li>I am usually reachable at <a href="mailto:hello@kachur.me">
+                hello@kachur.me</a></li>
         </ul>
+
         <h2>Work History</h2>
-        <p>Coming soon.... </p>
+        <h3>Software Developer @ <a href=https://sig.com>Susquehanna
+            International Group, LLP</a></h3>
+        <h3>Systems Architecture Co-op @ <a href=https://apple.com>Apple Inc.
+            </a></h3>
+        <h3>Assistant Systems Adminsitrator @ <a href=https://drexel.edu>Drexel
+            University</a></h3>
+        <p><em>More context coming soon....</em></p>
+
+        <h2>Other Internet Homes</h2>
+        <ul>
+            <li>I am @nickkachur on both <a href=https://github.com/nickkachur>
+                GitHub</a> and <a href=https://gitlab.com/nickkachur>GitLab</a>.
+            </li>
+            <li>I manage <a href=https://orthodoxphilly.org>OrthodoxPhilly.org
+                </a>.</li>
+        </ul>
+
+        <footer>
+            <p><em>Last updated 2021-01-10.</em></p>
+        </footer>
+
     </body>
 </html>
