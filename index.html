@@ -1,6 +1,44 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello, world!</h1>
-</body>
+    <head>
+        <style>
+            body {
+                font: 1.2em sans-serif;
+                margin: 1em auto;
+                max-width: 40em;
+            }
+            h1, h2, h3 {
+                line-height: 1.2em;
+            }
+            @media print {
+                max-width: none;
+            }
+            @media (prefers-color-scheme: dark) {
+                body {
+                    color: #fff;
+                    background: #000;
+                }
+                a:link {
+                   color: #9cf; 
+                }
+                a:hover, a:visited:hover {
+                    color:#cef
+                }
+		        a:visited {
+                    color:#c9f
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Nicholas Kachur</h1>
+        <h2>About Me</h2>
+        <ul>
+            <li>I'm a human being trying my best.</li>
+            <li>I live and work as a technologist in Philadelphia, PA, USA.</li>
+            <li>Other exploits to come soon.</li>
+        </ul>
+        <h2>Work History</h2>
+        <p>Coming soon.... </p>
+    </body>
 </html>
