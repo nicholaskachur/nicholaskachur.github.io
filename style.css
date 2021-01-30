@@ -3,7 +3,7 @@
 body {
     font: 1.2em;
     margin: 1em auto;
-    max-width: 40em;
+    max-width: 40em;  /* Also see img declaration below. */
 }
 
 h1, h2, h3 {
@@ -16,6 +16,10 @@ h1, h2, h3 {
 
 footer {
     text-align: right;
+}
+
+img {
+    width: 40em;  /* Also see body max-width declaration above. */
 }
 
 @media print {
