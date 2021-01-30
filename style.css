@@ -1,0 +1,39 @@
+/* Inspired by https://bestmotherfucking.website */
+
+body {
+    font: 1.2em;
+    margin: 1em auto;
+    max-width: 40em;
+}
+
+h1, h2, h3 {
+    line-height: 1.2em;
+}
+
+.title {
+    text-align: center;
+}
+
+footer {
+    text-align: right;
+}
+
+@media print {
+    body { max-width: none; }
+}
+
+@media (prefers-color-scheme: dark) {
+    body { 
+        color: white;
+        background: black;
+    }
+    a:link {
+        color: #9cf; 
+    }
+    a:hover, a:visited:hover {
+        color:#cef
+    }
+    a:visited {
+        color:#c9f
+    }
+}
