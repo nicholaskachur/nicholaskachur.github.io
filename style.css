@@ -1,5 +1,8 @@
 /* Inspired by https://bestmotherfucking.website */
 
+/* The max-width delclarations probably need optimized for mobile
+ * responsiveness. */
+
 body {
     font: 1.2em;
     margin: 1em auto;
