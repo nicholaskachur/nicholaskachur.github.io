@@ -7,9 +7,32 @@
     <link href="./style.css" rel="stylesheet" />
     <link href="./favicon.png" rel="icon" type="image/png" />
     <title>Nicholas Kachur &mdash; Amiable Technologist</title>
+
+    <script type="text/javascript">
+    window.onload = function() {
+        let defaultFont = document.getElementById("defaultFont");
+        let systemFont = document.getElementById("systemFont");
+
+        defaultFont.addEventListener("change", function(event) {
+            console.log("defaultFont change event fired.");
+            let body = document.querySelector("body");
+            if (defaultFont.checked) {
+                body.className = "defaultFont";
+            }
+        });
+
+        systemFont.addEventListener("change", function(event) {
+            console.log("systemFont change event fired.");
+            let body = document.querySelector("body");
+            if (systemFont.checked) {
+                body.className = "systemFont";
+            }
+        });
+    }
+    </script>
 </head>
 
-<body>
+<body class="defaultFont">
 <h1 class="title">Nicholas Kachur</h1>
 <hr>
 
@@ -55,6 +78,16 @@
     <li>I manage <a href=https://orthodoxphilly.org>OrthodoxPhilly.org</a>.
     </li>
 </ul>
+
+<h2>Easter Eggs</h2>
+<fieldset>
+    <legend>Choose your font (uses JavaScript):</legend>
+    <input type="radio" id="defaultFont" name="font" value="default" checked>
+    <label for="defaultFont">Browser Default</label>
+
+    <input type="radio" id="systemFont" name="font" value="system">
+    <label for="systemFont">System Font</label>
+</fieldset>
 
 <footer>
     <hr>

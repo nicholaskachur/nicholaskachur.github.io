@@ -17,6 +17,19 @@ h1, h2, h3 {
     text-align: center;
 }
 
+.defaultFont {
+    font-family: ;
+}
+
+.systemFont {
+    /* Adapted from and inspired by
+     *   https://systemfontstack.com/
+     */
+    font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
+      "Segoe UI", "Helvetica Neue", "Helvetica", "Cantarell", "Ubuntu",
+      "Roboto", sans-serif;
+}
+
 footer {
     text-align: right;
 }
