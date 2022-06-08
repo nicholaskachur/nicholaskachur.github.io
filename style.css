@@ -21,13 +21,24 @@ h1, h2, h3 {
     font-family: ;
 }
 
-.systemFont {
-    /* Adapted from and inspired by
-     *   https://systemfontstack.com/
-     */
+/* System fonts stacks adapted from and inspired by:
+ *   https://systemfontstack.com/
+ */
+.systemSans {
     font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
       "Segoe UI", "Helvetica Neue", "Helvetica", "Cantarell", "Ubuntu",
       "Roboto", sans-serif;
+}
+
+.systemSerif {
+    font-family: "Iowan Old Style", "Apple Garamond", "Baskerville",
+      "Times New Roman", "Droid Serif", "Times", "Source Serif Pro", serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.systemMono {
+    font-family: "Menlo", "Consolas", "Monaco", "Liberation Mono",
+      "Lucida Console", monospace;
 }
 
 footer {

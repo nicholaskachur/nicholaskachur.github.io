@@ -10,22 +10,39 @@
 
     <script type="text/javascript">
     window.onload = function() {
+        // Clearly it's unwieldy to define a new function for each
+        // option. Look for another way to do this before adding a new
+        // font choice.
         let defaultFont = document.getElementById("defaultFont");
-        let systemFont = document.getElementById("systemFont");
+        let systemSerif = document.getElementById("systemSerif");
+        let systemSans = document.getElementById("systemSans");
+        let systemMono = document.getElementById("systemMono");
 
         defaultFont.addEventListener("change", function(event) {
-            console.log("defaultFont change event fired.");
             let body = document.querySelector("body");
             if (defaultFont.checked) {
                 body.className = "defaultFont";
             }
         });
 
-        systemFont.addEventListener("change", function(event) {
-            console.log("systemFont change event fired.");
+        systemSerif.addEventListener("change", function(event) {
             let body = document.querySelector("body");
-            if (systemFont.checked) {
-                body.className = "systemFont";
+            if (systemSerif.checked) {
+                body.className = "systemSerif";
+            }
+        });
+
+        systemSans.addEventListener("change", function(event) {
+            let body = document.querySelector("body");
+            if (systemSans.checked) {
+                body.className = "systemSans";
+            }
+        });
+
+        systemMono.addEventListener("change", function(event) {
+            let body = document.querySelector("body");
+            if (systemMono.checked) {
+                body.className = "systemMono";
             }
         });
     }
@@ -85,8 +102,14 @@
     <input type="radio" id="defaultFont" name="font" value="default" checked>
     <label for="defaultFont">Browser Default</label>
 
-    <input type="radio" id="systemFont" name="font" value="system">
-    <label for="systemFont">System Font</label>
+    <input type="radio" id="systemSerif" name="font" value="system">
+    <label for="systemSerif">System Serif</label>
+
+    <input type="radio" id="systemSans" name="font" value="system">
+    <label for="systemSans">System Sans</label>
+
+    <input type="radio" id="systemMono" name="font" value="system">
+    <label for="systemMono">System Mono</label>
 </fieldset>
 
 <footer>
