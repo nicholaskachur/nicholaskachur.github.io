@@ -25,20 +25,21 @@ h1, h2, h3 {
  *   https://systemfontstack.com/
  */
 .systemSans {
-    font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-      "Segoe UI", "Helvetica Neue", "Helvetica", "Cantarell", "Ubuntu",
-      "Roboto", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Gill Sans MT", "Gill Sans",
+      "Segoe UI", "Helvetica Neue", "Helvetica", "Cantarell", "Ubuntu", "Roboto",
+      sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .systemSerif {
-    font-family: "Iowan Old Style", "Apple Garamond", "Baskerville",
+    font-family: "Iowan Old Style", "Apple Garamond", "Book Antiqua",
       "Times New Roman", "Droid Serif", "Times", "Source Serif Pro", serif,
       "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .systemMono {
     font-family: "Menlo", "Consolas", "Monaco", "Liberation Mono",
-      "Lucida Console", monospace;
+      "Lucida Console", monospace, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
 }
 
 footer {
@@ -46,7 +47,9 @@ footer {
 }
 
 img {
-    width: 40em;  /* Also see body max-width declaration above. */
+    max-width: 40em;  /* Also see body max-width declaration above. */
+    width: 100%;
+    height: auto;
 }
 
 @media print {
