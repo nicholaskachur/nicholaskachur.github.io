@@ -23,6 +23,9 @@ h1, h2, h3 {
 
 /* System fonts stacks adapted from and inspired by:
  *   https://systemfontstack.com/
+ *
+ * Additional guidance taken from Matthew Butterick's Practical Typography:
+ *   https://practicaltypography.com/system-fonts.html
  */
 .systemSans {
     font-family: -apple-system, BlinkMacSystemFont, "Gill Sans MT", "Gill Sans",
