@@ -40,7 +40,7 @@ h1, h2, h3 {
 }
 
 .systemMono {
-    font-family: "Menlo", "Consolas", "Monaco", "Liberation Mono",
+    font-family: "Menlo", "Cascadia Mono", "Consolas", "Monaco", "Liberation Mono",
       "Lucida Console", monospace, "Apple Color Emoji", "Segoe UI Emoji",
       "Segoe UI Symbol";
 }
