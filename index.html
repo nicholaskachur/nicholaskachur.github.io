@@ -10,39 +10,25 @@
 
     <script type="text/javascript">
     window.onload = function() {
-        // Clearly it's unwieldy to define a new function for each
-        // option. Look for another way to do this before adding a new
-        // font choice.
+        // This custom font selection can probably still be done better.
+        let body = document.querySelector("body");
         let defaultFont = document.getElementById("defaultFont");
         let systemSerif = document.getElementById("systemSerif");
         let systemSans = document.getElementById("systemSans");
         let systemMono = document.getElementById("systemMono");
+        let webmastersChoice = document.getElementById("webmastersChoice");
 
-        defaultFont.addEventListener("change", function(event) {
-            let body = document.querySelector("body");
+        fontSelector.addEventListener("change", function(event) {
             if (defaultFont.checked) {
                 body.className = "defaultFont";
-            }
-        });
-
-        systemSerif.addEventListener("change", function(event) {
-            let body = document.querySelector("body");
-            if (systemSerif.checked) {
-                body.className = "systemSerif";
-            }
-        });
-
-        systemSans.addEventListener("change", function(event) {
-            let body = document.querySelector("body");
-            if (systemSans.checked) {
+            } else if (systemSerif.checked) {
+                body.className = "systemSerif"
+            } else if (systemSans.checked) {
                 body.className = "systemSans";
-            }
-        });
-
-        systemMono.addEventListener("change", function(event) {
-            let body = document.querySelector("body");
-            if (systemMono.checked) {
+            } else if (systemMono.checked) {
                 body.className = "systemMono";
+            } else if (webmastersChoice.checked) {
+                body.className = "webmastersChoice";
             }
         });
     }
@@ -102,7 +88,7 @@
 </ul>
 
 <h2>Easter Eggs</h2>
-<fieldset>
+<fieldset id="fontSelector">
     <legend>Choose your font (uses JavaScript):</legend>
     <input type="radio" id="defaultFont" name="font" value="default" checked>
     <label for="defaultFont">Browser Default</label>
@@ -115,6 +101,9 @@
 
     <input type="radio" id="systemMono" name="font" value="system">
     <label for="systemMono">System Mono</label>
+
+    <input type="radio" id="webmastersChoice" name="font" value="system">
+    <label for="webmastersChoice">Webmaster's Choice</label>
 </fieldset>
 
 <footer>

@@ -1,8 +1,5 @@
 /* Inspired by https://bestmotherfucking.website */
 
-/* The max-width delclarations probably need optimized for mobile
- * responsiveness. */
-
 body {
     font: 1.2em;
     margin: 1em auto;
@@ -15,6 +12,36 @@ h1, h2, h3 {
 
 .title {
     text-align: center;
+}
+
+footer {
+    text-align: right;
+}
+
+img {
+    max-width: 40em;  /* Also see body max-width declaration above. */
+    width: 100%;
+    height: auto;
+}
+
+@media print {
+    body { max-width: none; }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: white;
+        background: black;
+    }
+    a:link {
+        color: #9cf;
+    }
+    a:hover, a:visited:hover {
+        color: #cef
+    }
+    a:visited {
+        color: #c9f
+    }
 }
 
 .defaultFont {
@@ -45,32 +72,43 @@ h1, h2, h3 {
       "Segoe UI Symbol";
 }
 
-footer {
-    text-align: right;
+
+/* Webmaster's choice font, Charter, lazily loaded on-demand.
+ * Font is a suggestion from and packaged by Matthew Butterick of
+ * https://practicaltypography.com
+ */
+@font-face {
+    font-family: charter;
+    font-style: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    src: url('fonts/charter_regular.woff2') format('woff2');
 }
 
-img {
-    max-width: 40em;  /* Also see body max-width declaration above. */
-    width: 100%;
-    height: auto;
+@font-face {
+    font-family: charter;
+    font-style: italic;
+    font-weight: normal;
+    font-stretch: normal;
+    src: url('fonts/charter_italic.woff2') format('woff2');
 }
 
-@media print {
-    body { max-width: none; }
+@font-face {
+    font-family: charter;
+    font-style: normal;
+    font-weight: bold;
+    font-stretch: normal;
+    src: url('fonts/charter_bold.woff2') format('woff2');
 }
 
-@media (prefers-color-scheme: dark) {
-    body { 
-        color: white;
-        background: black;
-    }
-    a:link {
-        color: #9cf; 
-    }
-    a:hover, a:visited:hover {
-        color:#cef
-    }
-    a:visited {
-        color:#c9f
-    }
+@font-face {
+    font-family: charter;
+    font-style: italic;
+    font-weight: bold;
+    font-stretch: normal;
+    src: url('fonts/charter_bold_italic.woff2') format('woff2');
+}
+
+.webmastersChoice {
+    font-family: charter;
 }
