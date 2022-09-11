@@ -18,7 +18,7 @@
         let systemMono = document.getElementById("systemMono");
         let webmastersChoice = document.getElementById("webmastersChoice");
 
-        fontSelector.addEventListener("change", function(event) {
+        function selectFont(event) {
             if (defaultFont.checked) {
                 body.className = "defaultFont";
             } else if (systemSerif.checked) {
@@ -30,7 +30,23 @@
             } else if (webmastersChoice.checked) {
                 body.className = "webmastersChoice";
             }
-        });
+        }
+        fontSelector.addEventListener("change", selectFont);
+        // Select on load, since different browsers cache selections.
+        selectFont(null);
+
+        let heroContainer = document.getElementById("heroContainer");
+        let showHeroImage = document.getElementById("showHeroImage");
+        function setHeroVisibility(event) {
+            if (showHeroImage.checked) {
+                heroContainer.className = "";
+            } else {
+                heroContainer.className = "hidden";
+            }
+        }
+        showHeroImage.addEventListener("change", setHeroVisibility);
+        // Set on load, since different browsers cache selections.
+        setHeroVisibility(null);
     }
     </script>
 </head>
@@ -38,6 +54,13 @@
 <body class="defaultFont">
 <h1 class="title">Nicholas Kachur</h1>
 <hr>
+
+<div id="heroContainer" class="hidden">
+    <img src=./newport-coast-by-richards-min.jpeg>
+    <p><em>Newport Coast by William Trost Richards, provided by the
+        <a href=https://philamuseum.org/collection/object/159130>
+            Philadelphia Museum of Art</a>.</em></p>
+</div>
 
 <h2>About Me</h2>
 <ul>
@@ -90,6 +113,14 @@
 </ul>
 
 <h2>Easter Eggs</h2>
+<h3>Dark-mode</h3>
+<p><em>This website respects browser light-mode / dark-mode settings.</em></p>
+
+<h3>Hero Image</h3>
+<input type="checkbox" id="showHeroImage">
+<label for="showHeroImage">Show Hero Image?</label>
+
+<h3>Font Selection</h3>
 <fieldset id="fontSelector">
     <legend>Choose your font (uses JavaScript and web fonts):</legend>
     <input type="radio" id="defaultFont" name="font" value="default" checked>
