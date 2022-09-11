@@ -37,8 +37,10 @@
 
         let heroContainer = document.getElementById("heroContainer");
         let showHeroImage = document.getElementById("showHeroImage");
+        let heroImage = document.getElementById("heroImage");
         function setHeroVisibility(event) {
             if (showHeroImage.checked) {
+                heroImage.src = heroImage.dataset.src;
                 heroContainer.className = "";
             } else {
                 heroContainer.className = "hidden";
@@ -56,7 +58,7 @@
 <hr>
 
 <div id="heroContainer" class="hidden">
-    <img src=./newport-coast-by-richards-min.jpeg loading="lazy">
+    <img id="heroImage" data-src=./newport-coast-by-richards-min.jpeg>
     <p><em>Newport Coast by William Trost Richards, provided by the
         <a href=https://philamuseum.org/collection/object/159130>
             Philadelphia Museum of Art</a>.</em></p>
