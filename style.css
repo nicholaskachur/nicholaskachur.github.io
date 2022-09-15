@@ -1,9 +1,9 @@
 /* Inspired by https://bestmotherfucking.website */
 
 body {
-    font: 1.2em;
+    font-size: 1.2em;
     margin: 1em auto;
-    max-width: 40em;  /* Also see img declaration below. */
+    max-width: 36em;  /* Also see img declaration below. */
 }
 
 h1, h2, h3 {
@@ -23,7 +23,7 @@ footer {
 }
 
 img {
-    max-width: 40em;  /* Also see body max-width declaration above. */
+    max-width: 36em;  /* Also see body max-width declaration above. */
     width: 100%;
     height: auto;
 }
