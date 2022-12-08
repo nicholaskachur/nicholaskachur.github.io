@@ -86,39 +86,39 @@ img {
  * https://practicaltypography.com
  */
 @font-face {
-    font-family: charter;
+    font-family: Charter;
     font-style: normal;
     font-weight: normal;
     font-stretch: normal;
-    src: url('fonts/charter_regular.woff2') format('woff2');
+    src: url('fonts/Charter/Charter-Regular.woff2') format('woff2');
 }
 
 @font-face {
-    font-family: charter;
+    font-family: Charter;
     font-style: italic;
     font-weight: normal;
     font-stretch: normal;
-    src: url('fonts/charter_italic.woff2') format('woff2');
+    src: url('fonts/Charter/Charter-Italic.woff2') format('woff2');
 }
 
 @font-face {
-    font-family: charter;
+    font-family: Charter;
     font-style: normal;
     font-weight: bold;
     font-stretch: normal;
-    src: url('fonts/charter_bold.woff2') format('woff2');
+    src: url('fonts/Charter/Charter-Bold.woff2') format('woff2');
 }
 
 @font-face {
-    font-family: charter;
+    font-family: Charter;
     font-style: italic;
     font-weight: bold;
     font-stretch: normal;
-    src: url('fonts/charter_bold_italic.woff2') format('woff2');
+    src: url('fonts/Charter/Charter-BoldItalic.woff2') format('woff2');
 }
 
 .webmastersChoice {
-    font-family: charter;
+    font-family: Charter;
 }
 
 
@@ -128,7 +128,7 @@ img {
     font-style: normal;
     font-weight: normal;
     font-stretch: normal;
-    src: url('fonts/EBGaramond-Regular.woff2') format('woff2');
+    src: url('fonts/EBGaramond/EBGaramond-Regular.woff2') format('woff2');
 }
 
 @font-face {
@@ -136,7 +136,7 @@ img {
     font-style: italic;
     font-weight: normal;
     font-stretch: normal;
-    src: url('fonts/EBGaramond-Italic.woff2') format('woff2');
+    src: url('fonts/EBGaramond/EBGaramond-Italic.woff2') format('woff2');
 }
 
 @font-face {
@@ -144,7 +144,7 @@ img {
     font-style: normal;
     font-weight: bold;
     font-stretch: normal;
-    src: url('fonts/EBGaramond-Bold.woff2') format('woff2');
+    src: url('fonts/EBGaramond/EBGaramond-Bold.woff2') format('woff2');
 }
 
 @font-face {
@@ -152,9 +152,47 @@ img {
     font-style: italic;
     font-weight: bold;
     font-stretch: normal;
-    src: url('fonts/EBGaramond-BoldItalic.woff2') format('woff2');
+    src: url('fonts/EBGaramond/EBGaramond-BoldItalic.woff2') format('woff2');
 }
 
 .ebGaramond {
     font-family: 'EB Garamond';
+}
+
+
+/* Additional Open Source font, FiraGO, lazily loaded on-demand. */
+@font-face {
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    src: url('fonts/FiraGO/FiraGO-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'FiraGO';
+    font-style: italic;
+    font-weight: normal;
+    font-stretch: normal;
+    src: url('fonts/FiraGO/FiraGO-Italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: bold;
+    font-stretch: normal;
+    src: url('fonts/FiraGO/FiraGO-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'FiraGO';
+    font-style: italic;
+    font-weight: bold;
+    font-stretch: normal;
+    src: url('fonts/FiraGO/FiraGO-BoldItalic.woff2') format('woff2');
+}
+
+.firaGo {
+    font-family: FiraGO;
 }

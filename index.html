@@ -18,6 +18,7 @@
         let systemMono = document.getElementById("systemMono");
         let webmastersChoice = document.getElementById("webmastersChoice");
         let ebGaramond = document.getElementById("ebGaramond");
+        let firaGo = document.getElementById("firaGo");
 
         function selectFont(event) {
             if (defaultFont.checked) {
@@ -32,6 +33,8 @@
                 body.className = "webmastersChoice";
             } else if (ebGaramond.checked) {
                 body.className = "ebGaramond";
+            } else if (firaGo.checked) {
+                body.className = "firaGo";
             }
         }
         fontSelector.addEventListener("change", selectFont);
@@ -161,6 +164,10 @@
 
     <input type="radio" id="ebGaramond" name="font" value="ebGaramond">
     <label for="ebGaramond">EB Garamond (~1 MB download)</label>
+    <br>
+
+    <input type="radio" id="firaGo" name="font" value="firaGo">
+    <label for="firaGo">FiraGO (~1 MB download)</label>
 </fieldset>
 
 <footer>
