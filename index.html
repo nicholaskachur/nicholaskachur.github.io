@@ -17,6 +17,7 @@
         let systemSans = document.getElementById("systemSans");
         let systemMono = document.getElementById("systemMono");
         let webmastersChoice = document.getElementById("webmastersChoice");
+        let ebGaramond = document.getElementById("ebGaramond");
 
         function selectFont(event) {
             if (defaultFont.checked) {
@@ -29,6 +30,8 @@
                 body.className = "systemMono";
             } else if (webmastersChoice.checked) {
                 body.className = "webmastersChoice";
+            } else if (ebGaramond.checked) {
+                body.className = "ebGaramond";
             }
         }
         fontSelector.addEventListener("change", selectFont);
@@ -140,20 +143,24 @@
     <label for="defaultFont">Browser Default</label>
     <br>
 
-    <input type="radio" id="systemSerif" name="font" value="system">
+    <input type="radio" id="systemSerif" name="font" value="systemSerif">
     <label for="systemSerif">System Serif</label>
     <br>
 
-    <input type="radio" id="systemSans" name="font" value="system">
+    <input type="radio" id="systemSans" name="font" value="systemSans">
     <label for="systemSans">System Sans</label>
     <br>
 
-    <input type="radio" id="systemMono" name="font" value="system">
+    <input type="radio" id="systemMono" name="font" value="systemMono">
     <label for="systemMono">System Mono</label>
     <br>
 
-    <input type="radio" id="webmastersChoice" name="font" value="system">
+    <input type="radio" id="webmastersChoice" name="font" value="webmastersChoice">
     <label for="webmastersChoice">Webmaster's Choice (~60 kB download)</label>
+    <br>
+
+    <input type="radio" id="ebGaramond" name="font" value="ebGaramond">
+    <label for="ebGaramond">EB Garamond (~1 MB download)</label>
 </fieldset>
 
 <footer>
