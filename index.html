@@ -8,7 +8,19 @@
     <title>Nicholas Kachur &mdash; Amiable Technologist</title>
 
     <script>
+    function setSalutation() {
+        // Debug formatter:
+        // let dateFormatter = new Intl.DateTimeFormat("en-US", { timeStyle: "long" });
+        let dateFormatter = new Intl.DateTimeFormat("en-US", { weekday: "long" });
+        let today = dateFormatter.format(new Date());
+        let salutation = document.getElementById("salutation");
+        salutation.innerText = `Happy ${today}! 🎉`;
+    }
+
+    window.onfocus = setSalutation;
     window.onload = function() {
+        setSalutation();
+
         // This custom font selection can probably still be done better.
         let body = document.querySelector("body");
         let defaultFont = document.getElementById("defaultFont");
@@ -59,8 +71,10 @@
 </head>
 
 <body class="defaultFont">
-<h1 class="title">Nicholas Kachur</h1>
-<hr>
+<header>
+    <h1>Nicholas Kachur</h1>
+    <hr>
+</header>
 
 <div id="heroContainer" class="hidden">
     <img id="heroImage" data-src=./newport-coast-by-richards-min.jpeg
@@ -72,6 +86,9 @@
        <a href=https://compressjpeg.com/>CompressJPEG</a>.
     </em></p>
 </div>
+
+<p id="salutation">Happy 2023! 🎉</p>
+<p>Hello and welcome! My name is Nicholas, thanks for visiting. 👋</p>
 
 <h2>About Me</h2>
 <ul>
