@@ -17,55 +17,36 @@
         salutation.innerText = `Happy ${today}! 🎉`;
     }
 
+    function selectFont(event) {
+        for (const selector of document.getElementById("fontSelector").elements) {
+            if (selector.checked) {
+                document.querySelector("body").className = selector.value;
+            }
+        }
+    }
+
+    function setHeroVisibility(event) {
+        let heroContainer = document.getElementById("heroContainer");
+        if (document.getElementById("showHeroImage").checked) {
+            let heroImage = document.getElementById("heroImage");
+            heroImage.src = heroImage.dataset.src;
+            heroContainer.className = "";
+        } else {
+            heroContainer.className = "hidden";
+        }
+    }
+
     window.onfocus = setSalutation;
     window.onload = function() {
         setSalutation();
 
-        // This custom font selection can probably still be done better.
-        let body = document.querySelector("body");
-        let defaultFont = document.getElementById("defaultFont");
-        let systemSerif = document.getElementById("systemSerif");
-        let systemSans = document.getElementById("systemSans");
-        let systemMono = document.getElementById("systemMono");
-        let webmastersChoice = document.getElementById("webmastersChoice");
-        let ebGaramond = document.getElementById("ebGaramond");
-        let firaGo = document.getElementById("firaGo");
-
-        function selectFont(event) {
-            if (defaultFont.checked) {
-                body.className = "defaultFont";
-            } else if (systemSerif.checked) {
-                body.className = "systemSerif"
-            } else if (systemSans.checked) {
-                body.className = "systemSans";
-            } else if (systemMono.checked) {
-                body.className = "systemMono";
-            } else if (webmastersChoice.checked) {
-                body.className = "webmastersChoice";
-            } else if (ebGaramond.checked) {
-                body.className = "ebGaramond";
-            } else if (firaGo.checked) {
-                body.className = "firaGo";
-            }
-        }
-        fontSelector.addEventListener("change", selectFont);
-        // Select on load, since different browsers cache selections.
+        // Must call events because some browsers cache form selections
+        // without firing events.
         selectFont(null);
-
-        let heroContainer = document.getElementById("heroContainer");
-        let showHeroImage = document.getElementById("showHeroImage");
-        let heroImage = document.getElementById("heroImage");
-        function setHeroVisibility(event) {
-            if (showHeroImage.checked) {
-                heroImage.src = heroImage.dataset.src;
-                heroContainer.className = "";
-            } else {
-                heroContainer.className = "hidden";
-            }
-        }
-        showHeroImage.addEventListener("change", setHeroVisibility);
-        // Set on load, since different browsers cache selections.
         setHeroVisibility(null);
+        document.getElementById("fontSelector").onchange = selectFont;
+        document.getElementById("showHeroImage").onchange = setHeroVisibility;
+
     }
     </script>
 </head>
@@ -162,6 +143,10 @@
     <legend>Choose your font:</legend>
     <input type="radio" id="defaultFont" name="font" value="default" checked>
     <label for="defaultFont">Browser Default</label>
+    <br>
+
+    <input type="radio" id="systemUi" name="font" value="systemUi">
+    <label for="systemUi">System UI</label>
     <br>
 
     <input type="radio" id="systemSerif" name="font" value="systemSerif">

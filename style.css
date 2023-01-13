@@ -64,9 +64,13 @@ img {
  * Additional guidance taken from Matthew Butterick's Practical Typography:
  *   https://practicaltypography.com/system-fonts.html
  */
+.systemUi {
+    font-family: system-ui;
+}
+
 .systemSans {
-    font-family: -apple-system, BlinkMacSystemFont, "Gill Sans MT", "Gill Sans",
-      "Segoe UI", "Helvetica Neue", "Helvetica", "Cantarell", "Ubuntu", "Roboto",
+    font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Segoe UI",
+      "Helvetica Neue", "Helvetica", "Cantarell", "Ubuntu", "Roboto",
       sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
