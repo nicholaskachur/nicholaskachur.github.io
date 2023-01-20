@@ -18,9 +18,9 @@
     }
 
     function selectFont(event) {
-        for (const selector of document.getElementById("fontSelector").elements) {
-            if (selector.checked) {
-                document.querySelector("body").className = selector.value;
+        for (const option of document.getElementById("fontSelector").options) {
+            if (option.selected) {
+                document.querySelector("body").className = option.value;
             }
         }
     }
@@ -139,39 +139,18 @@
 <label for="showHeroImage">Show Hero Image? (~400 kB download, appears at top)</label>
 
 <h3>Font Selection</h3>
-<fieldset id="fontSelector">
-    <legend>Choose your font:</legend>
-    <input type="radio" id="defaultFont" name="font" value="default" checked>
-    <label for="defaultFont">Browser Default</label>
-    <br>
-
-    <input type="radio" id="systemUi" name="font" value="systemUi">
-    <label for="systemUi">System UI</label>
-    <br>
-
-    <input type="radio" id="systemSerif" name="font" value="systemSerif">
-    <label for="systemSerif">System Serif</label>
-    <br>
-
-    <input type="radio" id="systemSans" name="font" value="systemSans">
-    <label for="systemSans">System Sans</label>
-    <br>
-
-    <input type="radio" id="systemMono" name="font" value="systemMono">
-    <label for="systemMono">System Mono</label>
-    <br>
-
-    <input type="radio" id="webmastersChoice" name="font" value="webmastersChoice">
-    <label for="webmastersChoice">Webmaster's Choice (~60 kB download)</label>
-    <br>
-
-    <input type="radio" id="ebGaramond" name="font" value="ebGaramond">
-    <label for="ebGaramond">EB Garamond (~1 MB download)</label>
-    <br>
-
-    <input type="radio" id="firaGo" name="font" value="firaGo">
-    <label for="firaGo">FiraGO (~1 MB download)</label>
-</fieldset>
+<label>Choose your font:
+    <select id="fontSelector">
+        <option value="defaultFont">Browser Default</option>
+        <option value="systemUi">System UI</option>
+        <option value="systemSans">System Sans</option>
+        <option value="systemSerif">System Serif</option>
+        <option value="systemMono">System Mono</option>
+        <option value="webmastersChoice">Webmaster's Choice (Charter, ~60kB download)</option>
+        <option value="ebGaramond">Open Serif (EB Garamond, ~1 MB download)</option>
+        <option value="firaGo">Open Sans (FiraGO, ~1 MB download)</option>
+    </select>
+</label>
 
 <footer>
     <hr>
