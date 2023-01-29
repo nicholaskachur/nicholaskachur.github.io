@@ -202,3 +202,41 @@ img {
 .firaGo {
     font-family: FiraGO;
 }
+
+
+/* Font from the U.S. Digital Service. */
+@font-face {
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    src: url('fonts/PublicSans/PublicSans-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Public Sans';
+    font-style: italic;
+    font-weight: normal;
+    font-stretch: normal;
+    src: url('fonts/PublicSans/PublicSans-Italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: bold;
+    font-stretch: normal;
+    src: url('fonts/PublicSans/PublicSans-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Public Sans';
+    font-style: italic;
+    font-weight: bold;
+    font-stretch: normal;
+    src: url('fonts/PublicSans/PublicSans-BoldItalic.woff2') format('woff2');
+}
+
+.publicSans {
+    font-family: 'Public Sans';
+}
