@@ -3,7 +3,7 @@
 body {
     font-size: 1.2em;
     margin: 1em auto;
-    max-width: 36em;  /* Also see img declaration below. */
+    max-width: 32em;  /* Also see img declaration below. */
     padding: 0 .62em;  /* Helpful on mobile. */
 }
 
@@ -29,7 +29,7 @@ footer {
 }
 
 img {
-    max-width: 36em;  /* Also see body max-width declaration above. */
+    max-width: 32em;  /* Also see body max-width declaration above. */
     width: 100%;
     height: auto;
 }
