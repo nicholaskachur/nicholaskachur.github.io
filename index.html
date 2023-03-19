@@ -10,10 +10,9 @@
 
     <script>
     function setSalutation() {
-        // Debug formatter:
-        // let dateFormatter = new Intl.DateTimeFormat("en-US", { timeStyle: "long" });
-        let dateFormatter = new Intl.DateTimeFormat("en-US", { weekday: "long" });
-        let today = dateFormatter.format(new Date());
+        let now = new Date();
+        let today = now.toLocaleString("en-US", { weekday: "long" });
+        // Debug: let today = now.toLocaleString("en-US", { timeStyle: "long" });
         let salutation = document.getElementById("salutation");
         salutation.innerText = `Happy ${today}! 🎉`;
     }
