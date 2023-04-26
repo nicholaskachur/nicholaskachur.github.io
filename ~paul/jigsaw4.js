@@ -182,24 +182,8 @@ function bangYa()
 function scramble()
 { for (i=0; i<12; i++)
   { var x='var obj=document.getElementById("p'+i+'")'; eval(x);
-    // Paul's original positioning:
-    // obj.style.top=""+cvrandom(480)+"px";
-    // obj.style.left=""+cvrandom(640)+"px";
-    // Edits from Nicholas Kachur to add a margin around the randomness:
-    var topLowerBound = 140;
-    var topUpperBound = 380;
-    var topOffset = topLowerBound + cvrandom(topUpperBound - topLowerBound);
-    topOffset = 140;
-    //topOffset = 380;
-    obj.style.top=""+topOffset+"px";
-    var leftLowerBound = 20;
-    var leftUpperBound = 500;
-    var leftOffset = leftLowerBound + cvrandom(leftUpperBound - leftLowerBound);
-    // leftOffset = 20;
-    // leftOffset = 500;
-    // leftOffset = 100;
-    obj.style.left=""+leftOffset+"px";
-    // End Nicholas edits.
+    obj.style.top=""+cvrandom(480)+"px";
+    obj.style.left=""+cvrandom(640)+"px";
     obj.style.display="block"; }
  }
 
