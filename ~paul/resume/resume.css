@@ -1,0 +1,22 @@
+body { font-family: verdana, sans-serif; font-size: 11px; line-height: 21px;
+	 color: #ccc; background-color: #003;}
+.wrapper { width: 816px; margin: 12px auto; }
+p {margin-top: 9px; }
+img { border: none; }
+
+div.title { font-size: 18px; font-variant: small-caps; letter-spacing: 6px; }
+div.company { font-style: italic; font-weight: bold; font-size: 9px; line-height: 24px;
+              background-color: #ccc; color: #003; margin: 8px 0;
+              text-align: center; letter-spacing: 36px; }
+div.address { font-size: 10px; font-variant: small-caps; letter-spacing: 2px; margin-bottom: 24px; }
+div.resume { background-color: #ddd; color: #003; padding: 18px; }
+
+div.reshead { font-weight: bold; font-variant: small-caps; letter-spacing: 8px; margin: 18px 0; }
+
+div.blurb {margin: 9px 20px; }
+div.note {margin: 6px 20px 9px; font-size: 10px; }
+
+.sc { font-variant: small-caps; }
+.client { font-style: italic; font-weight: bold; }
+
+a { color: #093; text-decoration: none; }

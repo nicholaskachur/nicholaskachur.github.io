@@ -1,0 +1,92 @@
+body { font-family: times, serif; font-size: 14px; color: #ccc; background-color: #003; 
+       margin: 20px; line-height: 16px; }
+p {margin-top: 6px }
+h1 { font-family: times, serif; font-weight: normal; font-size: 16px; margin-top: 0; margin-bottom: 6px }
+h2 { font-family: verdana, sans; font-weight: bold; font-size: 15px; margin-top: 0; margin-bottom: 12px }
+img { border: none }
+div.reshead { font-family: times, serif; font-size: 14px; width: 640px; letter-spacing: 6px; }
+div.title { font-family: times, serif; font-size: 21px; letter-spacing: 8px; margin-top: 12px }
+div.company { font-style: italic; font-weight: bold; font-size: 16px; line-height: 24px; background: #ccc;
+		  color: #003; width: 640px; margin-top: 10px; margin-bottom: 6px; 
+              text-align: center; letter-spacing: 24px; }
+
+#jigbox { position: absolute; top: 178px; left: 58px; width:440px; height:306px; border:2px solid #ccc; z-index: 9; }
+#jig0 { position: absolute; top: 180px; left: 60px; display:none; z-index: 10; }
+#jig1 { position: absolute; top: 180px; left: 60px; display:none; z-index: 11; }
+#jig2 { position: absolute; top: 180px; left: 60px; display:none; z-index: 12; }
+#jig3 { position: absolute; top: 180px; left: 60px; display:none; z-index: 13; }
+#jig4 { position: absolute; top: 180px; left: 60px; display:none; z-index: 14; }
+#jig5 { position: absolute; top: 180px; left: 60px; display:none; z-index: 15; }
+#jig6 { position: absolute; top: 180px; left: 60px; display:none; z-index: 16; }
+#jig7 { position: absolute; top: 180px; left: 60px; display:none; z-index: 17; }
+#jig8 { position: absolute; top: 180px; left: 60px; display:none; z-index: 18; }
+#jig9 { position: absolute; top: 180px; left: 60px; display:none; z-index: 19; }
+#jig10 { position: absolute; top: 180px; left: 60px; display:none; z-index: 20; }
+#jig11 { position: absolute; top: 180px; left: 60px; display:none; z-index: 21; }
+
+.drag { position: absolute; cursor:pointer; display:none; }
+.piece0 { top: 10px; left: 10px; width:138px; height:102px;
+	    background-image:url(images/piece0.png); background-position: 0px 0px; z-index: 30; }
+.piece1 { top: 10px; left: 10px; width:110px; height:130px;
+	    background-image:url(images/piece1.png); background-position: -110px 0px; z-index: 31; }
+.piece2 { top: 10px; left: 10px; width:138px; height:102px;
+	    background-image:url(images/piece2.png); background-position: -192px 0px; z-index: 32; }
+.piece3 { top: 10px; left: 10px; width:138px; height:130px;
+	    background-image:url(images/piece3.png); background-position: -302px 0px; z-index: 33; }
+.piece4 { top: 10px; left: 10px; width:110px; height:158px;
+	    background-image:url(images/piece4.png); background-position: 0px -74px; z-index: 34; }
+.piece5 { top: 10px; left: 10px; width:138px; height:102px;
+	    background-image:url(images/piece5.png); background-position: -82px -102px; z-index: 35; }
+.piece6 { top: 10px; left: 10px; width:166px; height:130px;
+	    background-image:url(images/piece6.png); background-position: -192px -74px; z-index: 36; }
+.piece7 { top: 10px; left: 10px; width:110px; height:130px;
+	    background-image:url(images/piece7.png); background-position: -330px -102px; z-index: 37; }
+.piece8 { top: 10px; left: 10px; width:110px; height:102px;
+	    background-image:url(images/piece8.png); background-position: 0px -204px; z-index: 38; }
+.piece9 { top: 10px; left: 10px; width:138px; height:130px;
+	    background-image:url(images/piece9.png); background-position: -82px -176px; z-index: 39; }
+.piece10 { top: 10px; left: 10px; width:166px; height:130px;
+	    background-image:url(images/piece10.png); background-position: -192px -176px; z-index: 40; }
+.piece11 { top: 10px; left: 10px; width:110px; height:102px;
+	    background-image:url(images/piece11.png); background-position: -330px -204px; z-index: 41; }
+
+#eclipse { position: absolute; top: 180px; left: 60px; display:none; z-index: 1; }
+#arch { position: absolute; top: 192px; left: 120px; width: 160px; display:none; z-index: 3; }
+#opera { position: absolute; top: 346px; left: 72px; width: 160px; display:none; z-index: 4; }
+#resume { position: absolute; top: 228px; left: 324px; width: 160px; display:none; z-index: 5; }
+#ghana { position: absolute; top: 368px; left: 286px; width: 162px; display:none; z-index: 6; }
+#more { font-family: verdana, sans; font-size: 10px; position: absolute; top: 490px; left: 58px; display:none; cursor:pointer; z-index: 2; }
+#skip { font-family: verdana, sans; font-size: 10px; position: absolute; top: 490px; left: 58px; cursor:pointer; z-index: 2; }
+
+#hangul { position: absolute; top: 180px; left: 60px; width:440px; height:306px; display:none;
+background-image:url(images/dokdo.jpg); color:#000; font-size:90px; line-height:96px; text-align:center;
+font-family: gungsuh, gulim, "#gungseo", applemyungjo; z-index: 99;}
+#hangul table {width:100%; height:100%;}
+#hangul td {height:100%; vertical-align:middle;}
+
+#bkg {position:fixed; top:0; left:0; width:100%; height:100%; background-color:#fff;
+	display:none; z-index:998;}
+#alrt {position:absolute; top:242px; left:190px; width:160px; z-index:999; padding:20px;
+	 display:none; text-align:center; background-color:#f2f2f2; border:9px groove #036;
+font-family:arial,helvetica; color:#000; font-size:11px; line-height:18px; font-weight:bold;}
+  #alrt p { margin-top:12px;}
+  #alrt h2 { font-size:12px; font-weight:bold; margin-bottom:12px;}
+  #alrt a { text-decoration:none; background-color:#036; padding:6px; margin-top:12px;}
+
+#speeder { width: 240px; font-family: verdana, sans; font-size: 10px; margin-top: 420px; 
+           padding: 12px; color: #003; background-color: #ccc; }
+.sc { font-family: myfontSC, times, serif; }
+.ital { font-style: oblique; }
+.dark { color: #666; }
+
+a:link { color: #ccc }
+a:visited { color: #ccc }
+a:hover   { border: none }
+a:active  { border: none }
+a:focus   { border: none }
+
+h2 a:link { text-decoration: none; border: none; }
+h2 a:visited { text-decoration: none; border: none; }
+h2 a:hover   { text-decoration: none; border: none; }
+h2 a:active  { text-decoration: none; border: none; }
+h2 a:focus   { text-decoration: none; border: none; }
