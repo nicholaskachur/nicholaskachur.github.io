@@ -90,3 +90,29 @@ h2 a:visited { text-decoration: none; border: none; }
 h2 a:hover   { text-decoration: none; border: none; }
 h2 a:active  { text-decoration: none; border: none; }
 h2 a:focus   { text-decoration: none; border: none; }
+
+#memorial {
+  background-color: #eee;
+  color: black;
+  width: 640px;
+  margin-top: 12px;
+}
+
+#memorial p {
+    font-size: 16px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+#memorial h2 {
+    padding-top: 12px;
+    text-align: center;
+}
+
+#memorial a { color: slateblue; }
+
+#farewell {
+    font-style: italic;
+    padding-bottom: 12px;
+    text-align: right;
+}

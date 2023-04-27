@@ -182,8 +182,21 @@ function bangYa()
 function scramble()
 { for (i=0; i<12; i++)
   { var x='var obj=document.getElementById("p'+i+'")'; eval(x);
-    obj.style.top=""+cvrandom(480)+"px";
-    obj.style.left=""+cvrandom(640)+"px";
+    // Begin Nicholas Kachur edits.
+    // Paul's original positioning:
+    // obj.style.top=""+cvrandom(480)+"px";
+    // obj.style.left=""+cvrandom(640)+"px";
+    // Edits from Nicholas Kachur to add a margin around the randomness,
+    // this way the pieces don't obscure the header or spread too far.
+    var topLowerBound = 140;
+    var topUpperBound = 380;
+    var topOffset = topLowerBound + cvrandom(topUpperBound - topLowerBound);
+    obj.style.top = `${topOffset}px`;
+    var leftLowerBound = 20;
+    var leftUpperBound = 500;
+    var leftOffset = leftLowerBound + cvrandom(leftUpperBound - leftLowerBound);
+    obj.style.left = `${leftOffset}px`;
+    // End Nicholas edits.
     obj.style.display="block"; }
  }
 
