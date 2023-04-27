@@ -123,19 +123,16 @@ function isContained(e)
   else {return false;} }
 
 function skipPuzzle()
-{ for (i=0; i<12; i++)
+{
+  // Posthumous addition from Nicholas Kachur.
+  button = document.getElementById("skipButton");
+  button.disabled = true;
+  button.innerText = "wait for the animation";
+  // End Nicholas addition.
+  for (i=0; i<12; i++)
   { var x='var obj=document.getElementById("p'+i+'")'; eval(x);
     obj.style.display="none"; }
   loveYa(); }
-
-// Posthumous addition from Nicholas Kachur.
-function skipButton() {
-    button = document.getElementById("skipButton");
-    button.disabled = true;
-    button.innerText = "wait for the animation";
-    skipPuzzle();
-}
-
 
 function moreLove()
 { if (tid) {clearInterval(tid);}
