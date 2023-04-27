@@ -128,6 +128,15 @@ function skipPuzzle()
     obj.style.display="none"; }
   loveYa(); }
 
+// Posthumous addition from Nicholas Kachur.
+function skipButton() {
+    button = document.getElementById("skipButton");
+    button.disabled = true;
+    button.innerText = "wait for the animation";
+    skipPuzzle();
+}
+
+
 function moreLove()
 { if (tid) {clearInterval(tid);}
   if (fid) {clearInterval(fid);}
