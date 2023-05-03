@@ -106,7 +106,11 @@ function moveIt(i)
 	if (dones==12) {s="<h2>Congratulations!</h2>";}
 	popAlert(s+msg[i]);
 	dts[i]=false;
-	if (dones==12) {tid=setTimeout(loveYa,3000);} }
+	if (dones==12) {
+        tid=setTimeout(loveYa,3000);
+        // Nicholas Kachur posthumous addition:
+        document.getElementById("skipButton").disabled = true;
+    } }
     else if (dts[i])
     { cobj.style.left=""+x+"px"; 
       cobj.style.top=""+y+"px"; } 
