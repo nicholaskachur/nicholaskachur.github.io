@@ -20,13 +20,19 @@ h3 {
     font-size: 1em;
 }
 
+h4 {
+    font-style: italic;
+    font-weight: normal;
+}
+
 .hidden {
     display: none;
 }
 
-footer {
-    text-align: right;
+footer, .signature {
+    text-align: end;
 }
+
 
 img {
     max-width: 32em;  /* Also see body max-width declaration above. */
