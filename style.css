@@ -29,8 +29,9 @@ h4 {
     display: none;
 }
 
-footer, .signature {
+.datestamp, .signature {
     text-align: end;
+    font-style: italic;
 }
 
 
