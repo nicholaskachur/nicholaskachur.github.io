@@ -77,6 +77,18 @@ img {
     a:visited {
         color: #c9f
     }
+    table {
+        border: 2px solid whitesmoke;
+    }
+    td, th {
+        border: 1px solid whitesmoke;
+    }
+    th {
+        background-color: darkslategrey;
+    }
+    tr:nth-child(odd) {
+        background-color: slategrey;
+    }
 }
 
 .defaultFont {
