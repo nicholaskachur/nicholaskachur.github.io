@@ -59,6 +59,26 @@ img {
     height: auto;
 }
 
+#toc-link {
+    /* Floating 'back to top' button adapted from:
+     *   https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+     */
+    display: block;
+    position: fixed;
+    bottom: 0.62em;
+    right: 0.62em;
+    z-index: 99;  /* Keep the button on top of everything else. */
+    color: whitesmoke;
+    background-color: steelblue;
+    border-radius: 0.62em;
+    padding: 0.2em 0.62em;
+    opacity: 0.95;
+}
+
+#toc-link:hover {
+    background-color: darkslategrey;
+}
+
 @media print {
     body { max-width: none; }
 }
