@@ -1,10 +1,61 @@
-/* Inspired by https://bestmotherfucking.website */
+/* Inspired by
+ * https://bestmotherfucking.website
+ * and
+ * https://alanhogan.com/code/modern-html-template
+ *
+ */
+
+:root {
+    --text-color: #222;
+    --page-bg-color: white;
+    --link-color: #06d;
+    --link-visited-color: #91e;
+    --link-hovered-color: #21e;
+    --table-border-color: #222;
+    --table-header-bg-color: lightsteelblue;
+    --table-row-odd-bg-color: whitesmoke;
+    --toc-link-text-color: whitesmoke;
+    --toc-link-bg-color: steelblue;
+    --toc-link-hovered-color: darkslategrey;
+    --max-width: 32em;
+    --print-max-width: 20em;
+    color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: white;
+        --page-bg-color: black;
+        --link-color: #9cf;
+        --link-visited-color: #c9f;
+        --link-hovered-color: #cef;
+        --table-border-color: whitesmoke;
+        --table-header-bg-color: darkslategrey;
+        --table-row-odd-bg-color: slategrey;
+        --toc-link-text-color: whitesmoke;
+        --toc-link-bg-color: steelblue;
+        --toc-link-hovered-color: darkslategrey;
+        color-scheme: dark;
+    }
+}
+
+/* TODO: As of April 2024 this media query doesn't seem to have any effect. */
+@media print {
+    body {
+        max-width: var(--print-max-width);
+    }
+    #toc-link {
+        display: none;
+    }
+}
 
 body {
+    color: var(--text-color);
+    background: var(--page-bg-color);
     font-size: 1.2em;
     margin: 1em auto;
-    max-width: 32em;  /* Also see img declaration below. */
     padding: 0 .62em;  /* Helpful on mobile. */
+    max-width: var(--max-width);
 }
 
 h1, h2, h3 {
@@ -26,22 +77,40 @@ h4 {
     font-weight: normal;
 }
 
+a:link {
+    color: var(--link-color);
+}
+
+a:visited {
+    color: var(--link-visited-color);
+}
+
+a:hover, a:visited:hover {
+    color: var(--link-hovered-color);
+}
+
 table {
+    border: 2px solid var(--table-border-color);
     border-collapse: collapse;
-    border: 2px solid black;
 }
 
 td, th {
-    border: 1px solid black;
+    border: 1px solid var(--table-border-color);
     padding: 0.2em 0.5em;
 }
 
 th {
-    background-color: lightsteelblue;
+    background-color: var(--table-header-bg-color);
 }
 
 tr:nth-child(odd) {
-    background-color: whitesmoke;
+    background-color: var(--table-row-odd-bg-color);
+}
+
+img {
+    max-width: var(--max-width);  /* Required here in addition to on <body>. */
+    width: 100%;
+    height: auto;
 }
 
 .hidden {
@@ -54,12 +123,6 @@ tr:nth-child(odd) {
 }
 
 
-img {
-    max-width: 32em;  /* Also see body max-width declaration above. */
-    width: 100%;
-    height: auto;
-}
-
 #toc-link {
     /* Floating 'back to top' button adapted from:
      *   https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
@@ -69,48 +132,17 @@ img {
     bottom: 0.62em;
     right: 0.62em;
     z-index: 99;  /* Keep the button on top of everything else. */
-    color: whitesmoke;
-    background-color: steelblue;
+    color: var(--toc-link-text-color);
+    background-color: var(--toc-link-bg-color);
     border-radius: 0.62em;
     padding: 0.2em 0.62em;
     opacity: 0.95;
 }
 
 #toc-link:hover {
-    background-color: darkslategrey;
+    background-color: var(--toc-link-hovered-color);
 }
 
-@media print {
-    body { max-width: none; }
-}
-
-@media (prefers-color-scheme: dark) {
-    body {
-        color: white;
-        background: black;
-    }
-    a:link {
-        color: #9cf;
-    }
-    a:hover, a:visited:hover {
-        color: #cef
-    }
-    a:visited {
-        color: #c9f
-    }
-    table {
-        border: 2px solid whitesmoke;
-    }
-    td, th {
-        border: 1px solid whitesmoke;
-    }
-    th {
-        background-color: darkslategrey;
-    }
-    tr:nth-child(odd) {
-        background-color: slategrey;
-    }
-}
 
 .defaultFont {
     font-family: ;
