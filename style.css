@@ -122,7 +122,6 @@ img {
     font-style: italic;
 }
 
-
 #toc-link {
     /* Floating 'back to top' button adapted from:
      *   https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
@@ -144,43 +143,14 @@ img {
 }
 
 
-.defaultFont {
-    font-family: ;
-}
-
-/* System fonts stacks adapted from and inspired by:
- *   https://systemfontstack.com/
- *
- * Additional guidance taken from Matthew Butterick's Practical Typography:
- *   https://practicaltypography.com/system-fonts.html
- */
-.systemUi {
-    font-family: system-ui;
-}
-
-.systemSans {
-    font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Segoe UI",
-      "Helvetica Neue", "Helvetica", "Cantarell", "Ubuntu", "Roboto",
-      sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-.systemSerif {
-    font-family: "Iowan Old Style", "Apple Garamond", "Book Antiqua",
-      "Times New Roman", "Droid Serif", "Times", "Source Serif Pro", serif,
-      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-.systemMono {
-    font-family: "Menlo", "Cascadia Mono", "Consolas", "Monaco", "Liberation Mono",
-      "Lucida Console", monospace, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
-}
-
-
 /* Webmaster's choice font, Charter, lazily loaded on-demand.
  * Font is a suggestion from and packaged by Matthew Butterick of
  * https://practicaltypography.com
  */
+body {
+    font-family: Charter, system-ui;
+}
+
 @font-face {
     font-family: Charter;
     font-style: normal;
@@ -213,120 +183,3 @@ img {
     src: url('fonts/Charter/Charter-BoldItalic.woff2') format('woff2');
 }
 
-.webmastersChoice {
-    font-family: Charter;
-}
-
-
-/* Additional Open Source font, EB Garamond, lazily loaded on-demand. */
-@font-face {
-    font-family: 'EB Garamond';
-    font-style: normal;
-    font-weight: normal;
-    font-stretch: normal;
-    src: url('fonts/EBGaramond/EBGaramond-Regular.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'EB Garamond';
-    font-style: italic;
-    font-weight: normal;
-    font-stretch: normal;
-    src: url('fonts/EBGaramond/EBGaramond-Italic.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'EB Garamond';
-    font-style: normal;
-    font-weight: bold;
-    font-stretch: normal;
-    src: url('fonts/EBGaramond/EBGaramond-Bold.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'EB Garamond';
-    font-style: italic;
-    font-weight: bold;
-    font-stretch: normal;
-    src: url('fonts/EBGaramond/EBGaramond-BoldItalic.woff2') format('woff2');
-}
-
-.ebGaramond {
-    font-family: 'EB Garamond';
-}
-
-
-/* Additional Open Source font, FiraGO, lazily loaded on-demand. */
-@font-face {
-    font-family: 'FiraGO';
-    font-style: normal;
-    font-weight: normal;
-    font-stretch: normal;
-    src: url('fonts/FiraGO/FiraGO-Regular.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'FiraGO';
-    font-style: italic;
-    font-weight: normal;
-    font-stretch: normal;
-    src: url('fonts/FiraGO/FiraGO-Italic.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'FiraGO';
-    font-style: normal;
-    font-weight: bold;
-    font-stretch: normal;
-    src: url('fonts/FiraGO/FiraGO-Bold.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'FiraGO';
-    font-style: italic;
-    font-weight: bold;
-    font-stretch: normal;
-    src: url('fonts/FiraGO/FiraGO-BoldItalic.woff2') format('woff2');
-}
-
-.firaGo {
-    font-family: FiraGO;
-}
-
-
-/* Font from the U.S. Digital Service. */
-@font-face {
-    font-family: 'Public Sans';
-    font-style: normal;
-    font-weight: normal;
-    font-stretch: normal;
-    src: url('fonts/PublicSans/PublicSans-Regular.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Public Sans';
-    font-style: italic;
-    font-weight: normal;
-    font-stretch: normal;
-    src: url('fonts/PublicSans/PublicSans-Italic.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Public Sans';
-    font-style: normal;
-    font-weight: bold;
-    font-stretch: normal;
-    src: url('fonts/PublicSans/PublicSans-Bold.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Public Sans';
-    font-style: italic;
-    font-weight: bold;
-    font-stretch: normal;
-    src: url('fonts/PublicSans/PublicSans-BoldItalic.woff2') format('woff2');
-}
-
-.publicSans {
-    font-family: 'Public Sans';
-}

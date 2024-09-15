@@ -16,42 +16,12 @@
         let salutation = document.getElementById("salutation");
         salutation.innerText = `Happy ${today}! 🎉`;
     }
-
-    function selectFont(event) {
-        for (const option of document.getElementById("fontSelector").options) {
-            if (option.selected) {
-                document.querySelector("body").className = option.value;
-            }
-        }
-    }
-
-    function setHeroVisibility(event) {
-        let heroContainer = document.getElementById("heroContainer");
-        if (document.getElementById("showHeroImage").checked) {
-            let heroImage = document.getElementById("heroImage");
-            heroImage.src = heroImage.dataset.src;
-            heroContainer.className = "";
-        } else {
-            heroContainer.className = "hidden";
-        }
-    }
-
     window.onfocus = setSalutation;
-    window.onload = function() {
-        setSalutation();
-
-        // Must call events because some browsers cache form selections
-        // without firing events.
-        selectFont(null);
-        setHeroVisibility(null);
-        document.getElementById("fontSelector").onchange = selectFont;
-        document.getElementById("showHeroImage").onchange = setHeroVisibility;
-
-    }
+    window.onload = setSalutation;
     </script>
 </head>
 
-<body class="webmastersChoice">
+<body>
 <header>
     <h1>Nicholas Kachur</h1>
     <hr>
@@ -129,31 +99,6 @@
     </li>
 </ul>
 
-<h2>Easter Eggs</h2>
-<p><em>These enhancements use JavaScript and may trigger additional loading.</em></p>
-
-<h3>Dark-mode</h3>
-<p><em>This website respects browser light-mode / dark-mode settings.</em></p>
-
-<h3>Hero Image</h3>
-<input type="checkbox" id="showHeroImage">
-<label for="showHeroImage">Show Hero Image? (~400 kB download, appears at top)</label>
-
-<h3>Font Selection</h3>
-<label>Choose your font:
-    <!-- Specifically set UI font for the select element to maximize readability. -->
-    <select id="fontSelector" class="systemUi">
-        <option value="webmastersChoice">Webmaster's Choice (Charter, ~60kB download)</option>
-        <option value="defaultFont">Browser Default</option>
-        <option value="systemUi">System UI</option>
-        <option value="systemSans">System Sans</option>
-        <option value="systemSerif">System Serif</option>
-        <option value="systemMono">System Mono</option>
-        <option value="firaGo">Open Sans (FiraGO, ~1 MB download)</option>
-        <option value="ebGaramond">Open Serif (EB Garamond, ~1 MB download)</option>
-        <option value="publicSans">Public Sans (U.S. Digital Service, ~150 kB download)</option>
-    </select>
-</label>
 
 <footer>
     <hr>
