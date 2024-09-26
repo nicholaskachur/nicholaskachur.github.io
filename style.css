@@ -6,36 +6,57 @@
  */
 
 :root {
-    --text-color: #222;
-    --page-bg-color: white;
-    --link-color: #06d;
-    --link-visited-color: #91e;
-    --link-hovered-color: #21e;
-    --table-border-color: #222;
-    --table-header-bg-color: lightsteelblue;
-    --table-row-odd-bg-color: whitesmoke;
-    --toc-link-text-color: whitesmoke;
-    --toc-link-bg-color: steelblue;
-    --toc-link-hovered-color: darkslategrey;
     --max-width: 32em;
-    --print-max-width: 20em;
+    --print-max-width: var(--max-width);
     color-scheme: light;
+
+    /* Color definitions inspired by coolors.com palette picker. */
+    --light-neutral: #EDEAE0;  /* Alabaster: a brown-tinged off-white. */
+    --dark-neutral: #111111;   /* Night: a deep black. */
+    --primary-blue: #235789;   /* Lapis Lazuli: a medium blue. */
+    --dark-blue: #1F305E;      /* Delft Blue: a dark navy blue. */
+    --medium-blue: #4682b4;    /* Steel Blue: a grey-blue. */
+    --light-blue: #9EB9D4;     /* Powder Blue: a grey-sky blue. */
+    --lightest-blue: #F0F8FF;  /* Alice Blue: a white-blue. */
+    --purple: #8D3B72;         /* Plum: a blue-purple. */
+    --light-purple: #E0B0FF;   /* Mauve: a light purple. */
+
+    /* Basic required colors. */
+    --text-color: var(--dark-neutral);
+    --page-bg-color: var(--light-neutral);
+    --text-highlight-color: var(--primary-blue);
+    --link-color: var(--primary-blue);
+    --link-visited-color: var(--purple);
+    --link-hovered-color: var(--medium-blue);
+
+    /* Used on the recipes page. */
+    --table-border-color: var(--dark-neutral);
+    --table-header-bg-color: var(--light-blue);
+    --table-row-odd-bg-color: var(--lightest-blue);
+    --toc-link-text-color: var(--light-neutral);
+    --toc-link-bg-color: var(--medium-blue);
+    --toc-link-hovered-color: var(--primary-blue);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --text-color: white;
-        --page-bg-color: black;
-        --link-color: #9cf;
-        --link-visited-color: #c9f;
-        --link-hovered-color: #cef;
-        --table-border-color: whitesmoke;
-        --table-header-bg-color: darkslategrey;
-        --table-row-odd-bg-color: slategrey;
-        --toc-link-text-color: whitesmoke;
-        --toc-link-bg-color: steelblue;
-        --toc-link-hovered-color: darkslategrey;
         color-scheme: dark;
+
+        /* Basic required styles. */
+        --text-color: var(--light-neutral);
+        --page-bg-color: var(--dark-neutral);
+        --text-highlight-color: var(--light-blue);
+        --link-color: var(--light-blue);
+        --link-visited-color: var(--light-purple);
+        --link-hovered-color: var(--lightest-blue);
+
+        /* Used on the recipes page. */
+        --table-border-color: var(--light-neutral);
+        --table-header-bg-color: var(--dark-blue);
+        --table-row-odd-bg-color: var(--primary-blue);
+        --toc-link-text-color: var(--light-neutral);
+        --toc-link-bg-color: var(--medium-blue);
+        --toc-link-hovered-color: var(--primary-blue);
     }
 }
 
@@ -59,10 +80,11 @@ body {
 }
 
 h1, h2, h3 {
-    line-height: 1.2em;
+    line-height: 1.2;
 }
 
 h1 {
+    color: var(--text-highlight-color);
     text-align: center;
     margin: 0;
 }
@@ -122,6 +144,14 @@ img {
     font-style: italic;
 }
 
+.subtitle {
+    font-style: italic;
+    text-align: center;
+    line-height: 1.1;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
 #toc-link {
     /* Floating 'back to top' button adapted from:
      *   https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
@@ -134,7 +164,7 @@ img {
     color: var(--toc-link-text-color);
     background-color: var(--toc-link-bg-color);
     border-radius: 0.62em;
-    padding: 0.2em 0.62em;
+    padding: 0.4em 1em;
     opacity: 0.95;
 }
 
